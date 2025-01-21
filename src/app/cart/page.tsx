@@ -9,12 +9,19 @@ import { TbTrashFilled } from "react-icons/tb";
 import { useCart } from "../../components/CartContext";
 import Sevices from "../../components/sevices";
 
+interface CartItem {
+  _id: string;
+  title: string;
+  price: number;
+  imageUrl: string;
+}
+
 const Cart = () => {
   const usingRount = useRouter();
   const { cart, removeFromCart } = useCart();
 
   const subtotal = cart.reduce(
-    (total: number, item: any) => total + item.price,
+    (total: number, item: CartItem) => total + item.price,
     0
   );
 
@@ -53,7 +60,7 @@ const Cart = () => {
             {cart.length === 0 ? (
               <p className="text-center text-gray mt-10">Your cart is empty!</p>
             ) : (
-              cart.map((item: any, i: any) => (
+              cart.map((item, i) => (
                 <div
                   key={i}
                   className="flex justify-around items-center sm:flex sm:justify-around sm:items-center mt-4"
