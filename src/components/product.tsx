@@ -29,8 +29,9 @@ interface Product {
 export const sanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, 
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,     
-  apiVersion: '2023-01-01',                            
+  apiVersion: '2025-01-13',                             
   useCdn: true, 
+  token: process.env.SANITY_API_TOKEN,
 });
 
 const ProductCard: React.FC = () => {
