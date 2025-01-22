@@ -7,6 +7,8 @@ import { client } from "@/sanity/lib/client";
 import { useCart } from "../components/CartContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { createClient } from '@sanity/client';
+
 
 interface Product {
   _id: string;
@@ -23,6 +25,13 @@ interface Product {
   tags: string[];
   quantity: number;
 }
+
+export const sanityClient = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, 
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,     
+  apiVersion: '2023-01-01',                            
+  useCdn: true, 
+});
 
 const ShopCard: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
