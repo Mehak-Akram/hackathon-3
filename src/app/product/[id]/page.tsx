@@ -2,13 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import { FaMinus, FaPlus, FaStar } from "react-icons/fa";
 import Recentproduct from "@/components/recentProduct";
 import { useCart } from "@/components/CartContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { createClient } from "@sanity/client";
 
 interface Product {
   _id: string;
@@ -20,6 +20,14 @@ interface Product {
   tags: string[];
   quantity: number;
 }
+
+export const sanityClient = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, 
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,     
+  apiVersion: '2025-01-17',                             
+  useCdn: true, 
+  token: process.env.SANITY_API_TOKEN,
+});
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -40,7 +48,7 @@ const ProductDetail = () => {
           "imageUrl": productImage.asset->url,
           tags
         }`;
-        const product = await client.fetch(query, { id });
+        const product = await sanityClient.fetch(query, { id });
         setProduct(product);
       } catch (error) {
         console.error("Error Fetching Product:", error);
