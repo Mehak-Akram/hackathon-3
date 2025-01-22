@@ -40,14 +40,15 @@ const ShopCard: React.FC = () => {
   const fetchProducts = async () => {
     try {
       const query = `*[_type == "product"] {
-        _id,
-        title,
-        price,
-        description,
-        discountPercentage,
-        "imageUrl": productImage.asset->url,
-        tags,
-      }`;
+  _id,
+  title,
+  price,
+  "imageUrl": productImage.asset->url,
+  tags,
+  discountPercentage,
+  description,
+  isNew
+}`;
       const data = await client.fetch(query);
       setProducts(data);
     } catch (error) {
