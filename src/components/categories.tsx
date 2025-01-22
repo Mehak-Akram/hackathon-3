@@ -10,7 +10,7 @@ const Categories = () => {
   return (
     <div className=" mb-[90px] mt-[90px]">
       <div className="text-center mb-10">
-        <h1 className="text-3xl font-extrabold text-center">
+        <h1 className="text-3xl font-extrabold text-center text-black">
           Browse The Range
         </h1>
         <br />

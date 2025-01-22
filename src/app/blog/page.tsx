@@ -54,7 +54,7 @@ const Blog = () => {
                 </div>
               </div>
 
-              <h1 className="mt-5 font-semibold text-3xl">
+              <h1 className="mt-5 font-semibold text-3xl text-black">
                 Going all-in with millennial design
               </h1>
 
@@ -93,7 +93,7 @@ const Blog = () => {
                 </div>
               </div>
 
-              <h1 className="mt-5 font-semibold text-3xl">
+              <h1 className="mt-5 font-semibold text-3xl text-black">
                 Exploring new ways of decorating
               </h1>
 
@@ -132,7 +132,7 @@ const Blog = () => {
                 </div>
               </div>
 
-              <h1 className="mt-5 font-semibold text-3xl">
+              <h1 className="mt-5 font-semibold text-3xl text-black">
                 Handmade pieces that took time to make
               </h1>
 
@@ -193,11 +193,11 @@ const Blog = () => {
             </div>
             <div className="w-[393px] h-[650px]  mt-7 flex justify-center">
               <div className="w-[252px] h-[618px] ">
-                <h1 className=" font-semibold text-3xl">Recent Posts</h1>
+                <h1 className=" font-semibold text-3xl text-black">Recent Posts</h1>
                 <div className="flex my-9 gap-2 items-center">
                   <Image src={post1} alt="post1" />
                   <div className="font-medium">
-                    <p>
+                    <p className="text-black">
                       Going all-in with <br /> millennial design
                     </p>
                     <p className="text-gray">03 Aug 2022</p>
@@ -206,7 +206,7 @@ const Blog = () => {
                 <div className="flex my-9 gap-2 items-center">
                   <Image src={post2} alt="post1" />
                   <div className="font-medium">
-                    <p>
+                    <p className="text-black">
                       Exploring new ways <br /> of decorating
                     </p>
                     <p className="text-gray">03 Aug 2022</p>
@@ -215,7 +215,7 @@ const Blog = () => {
                 <div className="flex my-9 gap-2 items-center">
                   <Image src={post3} alt="post1" />
                   <div className="font-medium">
-                    <p>
+                    <p className="text-black">
                       Handmade pieces <br /> that took time to make
                     </p>
                     <p className="text-gray">03 Aug 2022</p>
@@ -224,7 +224,7 @@ const Blog = () => {
                 <div className="flex my-9 gap-2 items-center">
                   <Image src={post4} alt="post1" />
                   <div className="font-medium">
-                    <p>
+                    <p className="text-black">
                       Modern home in <br />
                       Milan
                     </p>
@@ -234,7 +234,7 @@ const Blog = () => {
                 <div className="flex my-9 gap-2 items-center">
                   <Image src={post5} alt="post1" />
                   <div className="font-medium">
-                    <p>
+                    <p className="text-black">
                       Colorful office <br /> redesign
                     </p>
                     <p className="text-gray">03 Aug 2022</p>
@@ -246,19 +246,19 @@ const Blog = () => {
         </div>
       </div>
       <div className="flex justify-center gap-5 my-6">
-        <div className="bg-cream hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center text- hover:text-white">
+        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center text- hover:text-white">
           {" "}
           1
         </div>
-        <div className="bg-cream hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center hover:text-white">
+        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center hover:text-white">
           {" "}
           2
         </div>
-        <div className="bg-cream hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center hover:text-white">
+        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center hover:text-white">
           {" "}
           3
         </div>
-        <div className="bg-cream hover:bg-myColor h-[60px] w-[98px] rounded-lg flex items-center justify-center hover:text-white">
+        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[98px] rounded-lg flex items-center justify-center hover:text-white">
           {" "}
           Next
         </div>
