@@ -14,36 +14,36 @@ const Checkout = () => {
           <div className="flex flex-col items-center justify-center sm:flex sm:flex-row sm:justify-center">
             <Image src={logo} alt="logo" className="" />
           </div>{" "}
-          <h1 className="  text-3xl sm:text-5xl font-bold text-center">
+          <h1 className="  text-3xl sm:text-5xl font-bold text-center text-black">
             Checkout
           </h1>
           <div className="flex  items-center sm:flex sm:flex-row sm:justify-center">
             <Link href={"/"}>
-              <p className="font-bold">Home</p>
+              <p className="font-bold text-black">Home</p>
             </Link>
             <RiArrowDropRightLine className="font-bold text-3xl" />
-            <p>Checkout</p>
+            <p className="text-black">Checkout</p>
           </div>
         </div>
       </div>
       <div className="flex justify-center">
         <div className=" h-[1614px] w-[1100px] my-10 sm:flex sm:gap-10">
           <div className="sm:h-[1730px] sm:w-[608px]  px-6 py-10 sm:py-20">
-            <h1 className="text-2xl sm:text-3xl font-bold">Billing details</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-black">Billing details</h1>
             <div className="sm:flex sm:gap-7 mt-16">
               <div>
-                <label htmlFor="name" className="font-bold">
+                <label htmlFor="name" className="font-bold text-black">
                   First Name
                 </label>
                 <br />
                 <input
                   type="text"
-                  className=" sm:h-[75px] sm:w-[211px] bg-transparent border border-gray rounded-lg px-3 py-3"
+                  className=" sm:h-[75px] sm:w-[211px] bg-transparent border border-gray rounded-lg px-3 py-3 "
                   id="name"
                 />
               </div>
               <div>
-                <label htmlFor="name" className="font-bold mt-3 sm:mt-0 ">
+                <label htmlFor="name" className="font-bold mt-3 sm:mt-0 text-black">
                   Last Name
                 </label>
                 <br />
@@ -57,7 +57,7 @@ const Checkout = () => {
 
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 Company Name (Optional)
               </label>
               <br />
@@ -70,7 +70,7 @@ const Checkout = () => {
 
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 Country / Region
               </label>
               <br />
@@ -87,7 +87,7 @@ const Checkout = () => {
 
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 Street address{" "}
               </label>
               <br />
@@ -100,7 +100,7 @@ const Checkout = () => {
 
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 Town / City{" "}
               </label>
               <br />
@@ -113,7 +113,7 @@ const Checkout = () => {
 
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 Province{" "}
               </label>
               <br />
@@ -127,7 +127,7 @@ const Checkout = () => {
             </div>
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 ZIP code{" "}
               </label>
               <br />
@@ -139,7 +139,7 @@ const Checkout = () => {
             </div>
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 Phone{" "}
               </label>
               <br />
@@ -151,7 +151,7 @@ const Checkout = () => {
             </div>
             <br />
             <div>
-              <label htmlFor="name" className="font-bold">
+              <label htmlFor="name" className="font-bold text-black">
                 Email address{" "}
               </label>
               <br />
@@ -174,16 +174,16 @@ const Checkout = () => {
             <div className=" sm:h-[616px] sm:w-[533px]">
               <div className="border-b-[1px] border-gray flex flex-col gap-5">
                 <div className="flex justify-between">
-                  <h1 className="font-semibold text-2xl">Product</h1>
-                  <h1 className="font-semibold text-2xl">Subtotal</h1>
+                  <h1 className="font-semibold text-2xl text-black">Product</h1>
+                  <h1 className="font-semibold text-2xl text-black">Subtotal</h1>
                 </div>
                 <div className="flex justify-between">
                   <h1 className="font-semibold  text-gray">Asgaard sofa x 1</h1>
-                  <h1 className="">Rs. 250,000.00</h1>
+                  <h1 className="text-black">Rs. 250,000.00</h1>
                 </div>{" "}
                 <div className="flex justify-between">
-                  <h1>Subtotal</h1>
-                  <h1>Rs. 250,000.00</h1>
+                  <h1 className="text-black">Subtotal</h1>
+                  <h1 className="text-black">Rs. 250,000.00</h1>
                 </div>
                 <div className="flex justify-between mb-4">
                   <h1>Total</h1>

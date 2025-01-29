@@ -21,11 +21,10 @@ interface Product {
   quantity: number;
 }
 
-
-
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState<Product | null>(null);
+  const [quantity, setQuantity] = useState(1); // State to track product quantity
   const { addToCart } = useCart();
 
   useEffect(() => {
@@ -65,6 +64,16 @@ const ProductDetail = () => {
       pauseOnHover: true,
       draggable: true,
     });
+  };
+
+  const handleIncrement = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1); // Increase quantity
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1); // Decrease quantity, but not below 1
+    }
   };
 
   return (
@@ -134,15 +143,25 @@ const ProductDetail = () => {
 
           {/* Add to Cart Button */}
           <div className="flex mt-3 gap-6">
-            <div className="">
-              <button className="w-[123px] h-[64px] rounded-2xl border-[1px] text-myColor flex justify-center items-center gap-5">
-                <FaMinus /> 1 <FaPlus />
+            <div className="flex items-center">
+              <button
+                onClick={handleDecrement}
+                className="w-[40px] h-[40px] rounded-full border-[1px] text-myColor flex justify-center items-center gap-2"
+              >
+                <FaMinus />
+              </button>
+              <span className="mx-3 text-xl">{quantity}</span>
+              <button
+                onClick={handleIncrement}
+                className="w-[40px] h-[40px] rounded-full border-[1px] text-myColor flex justify-center items-center gap-2"
+              >
+                <FaPlus />
               </button>
             </div>
             <button
               className="w-[215px] h-[64px] rounded-2xl border-[1px] text-myColor"
               onClick={() => {
-                addToCart(product);
+                addToCart({ ...product, quantity }); // Add quantity to cart
                 showToast(`Product added to cart!`);
               }}
             >
@@ -155,7 +174,7 @@ const ProductDetail = () => {
         </div>
       </div>
       <div className="flex justify-center mt-52 sm:mt-2">
-        <div className="h-[1800px] sm:h-[844px] w-[1440px] flex flex-col items-center justify-center  sm:mt-20 border-b-[1px]">
+        <div className="h-[1800px] sm:h-[844px] w-[1440px] flex flex-col items-center justify-center sm:mt-20 border-b-[1px]">
           <div className="flex justify-center gap-14">
             <h1 className="text-1xl sm:text-2xl">Description</h1>
             <h1 className="text-gray text-1xl sm:text-2xl">

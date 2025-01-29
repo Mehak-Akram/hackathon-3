@@ -100,10 +100,9 @@ const ProductCard: React.FC = () => {
                     ${product.price}
                   </p>
                   {product.discountPercentage > 0 && (
-                    <p className="text-sm text-green-600">
-                      {product.discountPercentage}% OFF
-                    </p>
+                    <div className="scroll-m-20 text-xs font-semibold tracking-tight text-myWhite bg-green-700 absolute top-0 left-2 w-[87px] p-2 text-center uppercase rounded-tl-xl rounded-bl-xl myDiscount">{`${product.discountPercentage}% off`}</div>
                   )}
+                  
                 </div>
               </div>
               <div className="mt-4 flex flex-wrap gap-2">

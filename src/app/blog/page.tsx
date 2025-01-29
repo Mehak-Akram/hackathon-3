@@ -24,13 +24,13 @@ const Blog = () => {
           <div className="flex flex-col items-center justify-center sm:flex sm:flex-row sm:justify-center">
             <Image src={logo} alt="logo" className="" />
           </div>{" "}
-          <h1 className="  text-3xl sm:text-5xl font-bold text-center">Blog</h1>
+          <h1 className="  text-3xl sm:text-5xl font-bold text-center text-black">Blog</h1>
           <div className="flex  items-center sm:flex sm:flex-row sm:justify-center">
             <Link href={"/"}>
-              <p className="font-bold">Home</p>
+              <p className="font-bold text-black">Home</p>
             </Link>
             <RiArrowDropRightLine className="font-bold text-3xl" />
-            <p>Blog</p>
+            <p className="text-black">Blog</p>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const Blog = () => {
                 elementum.
               </p>
 
-              <button className="h-[36px] w-[89px] border-b-[2px] border-b-black mt-5">
+              <button className="h-[36px] w-[89px] border-b-[2px] border-b-black mt-5 text-black">
                 Read more
               </button>
             </div>
@@ -110,7 +110,7 @@ const Blog = () => {
                 elementum.
               </p>
 
-              <button className="h-[36px] w-[89px] border-b-[2px] border-b-black mt-5">
+              <button className="h-[36px] w-[89px] border-b-[2px] border-b-black mt-5 text-black">
                 Read more
               </button>
             </div>
@@ -149,7 +149,7 @@ const Blog = () => {
                 elementum.
               </p>
 
-              <button className="h-[36px] w-[89px] border-b-[2px] border-b-black mt-5">
+              <button className="h-[36px] w-[89px] border-b-[2px] border-b-black mt-5 text-black">
                 Read more
               </button>
             </div>

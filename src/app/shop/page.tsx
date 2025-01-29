@@ -18,10 +18,10 @@ const Shop = () => {
           <h1 className="  text-3xl sm:text-5xl font-bold text-center text-black">Shop</h1>
           <div className="flex  items-center sm:flex sm:flex-row sm:justify-center">
             <Link href={"/"}>
-              <p className="font-bold">Home</p>
+              <p className="font-bold text-black">Home</p>
             </Link>
             <RiArrowDropRightLine className="font-bold text-3xl" />
-            <p>Shop</p>
+            <p className="text-black">Shop</p>
           </div>
         </div>
       </div>
@@ -32,15 +32,15 @@ const Shop = () => {
           <Image src={dot} alt="pic" />
           <Image src={square} alt="pic" />
           <div className="text-3xl font-bold text-gray">|</div>
-          <p className="text-black">Showing 1-16 of 32 results</p>
+          <p className="text-black">Showing 1-25 of 24 results</p>
         </div>
         <div className="flex justify-between gap-5 items-center mt-10 sm:mt-0 sm:flex sm:items-center sm:gap-7">
-          <h1 className="text-xl">Show</h1>
+          <h1 className="text-xl text-black">Show</h1>
           <div className="bg-white h-[44px] w-[55px] text-gray flex justify-center items-center">
             {" "}
-            16
+            24
           </div>
-          <h1 className="text-xl">Short by</h1>
+          <h1 className="text-xl text-black">Short by</h1>
           <div className="bg-white w-[120px] h-[44px] sm:w-[188px] text-gray flex justify-center items-center">
             {" "}
             Default
