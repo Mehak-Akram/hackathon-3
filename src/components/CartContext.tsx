@@ -15,10 +15,12 @@ interface Product {
 
 interface CartContextType {
   cart: Product[];
+  checkoutItems: Product[];
   addToCart: (product: Product) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
+  checkoutCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -27,6 +29,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [cart, setCart] = useState<Product[]>([]);
+  const [checkoutItems, setCheckoutItems] = useState<Product[]>([]);
 
   const addToCart = (product: Product) => {
     setCart((prevCart) => {
@@ -58,9 +61,22 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
     setCart([]);
   };
 
+  const checkoutCart = () => {
+    setCheckoutItems(cart);
+    clearCart();
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart }}
+      value={{
+        cart,
+        checkoutItems,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        checkoutCart,
+      }}
     >
       {children}
     </CartContext.Provider>
