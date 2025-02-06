@@ -76,15 +76,16 @@ const Checkout = () => {
         totalAmount: total,
         items: checkoutItems.map((item) => ({
           _type: "item",
+          _key: crypto.randomUUID(),
           title: item.title,
           price: item.price,
           quantity: item.quantity,
         })),
         status: "Pending",
       };
-
+  
       try {
-        await client.create(orderData); 
+        await client.create(orderData);
         alert("Order placed successfully!");
       } catch (error) {
         console.error("Order placement failed:", error);
@@ -92,6 +93,7 @@ const Checkout = () => {
       }
     }
   };
+  
 
   return (
     <div>
