@@ -204,7 +204,7 @@ const Checkout = () => {
                   );
                 })
               )}
-              <div className="flex justify-between text-lg font-bold mt-4">
+              <div className="flex justify-between text-lg font-bold mt-4 text-black">
                 <p>Total</p>
                 <p className="text-myColor text-2xl font-bold">
                   Rs. {total.toLocaleString()}
@@ -212,7 +212,7 @@ const Checkout = () => {
               </div>
               <button
                 onClick={placeOrder}
-                className="w-full mt-6 py-3 text-xl bg-myColor text-white rounded-xl hover:bg-gray-800 transition"
+                className="w-full mt-6 py-3 text-xl bg-myColor hover:bg-myColor/70 text-white rounded-xl hover:bg-gray-800 transition"
               >
                 Place Order
               </button>
