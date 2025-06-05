@@ -71,7 +71,7 @@ const Footer = () => {
         <hr className="sm:mt-8 sm:w-[1640px] sm:border-[1px] sm:border-slate-300" />
       </div>
       <h1 className="sm:ml-28  font-semibold mt-9 mb-9 text-center sm:text-start text-black">
-        2023 furino. All rights reverved
+        2025 furino. All rights reverved
       </h1>
     </div>
   );
