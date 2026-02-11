@@ -36,7 +36,7 @@ const Footer = () => {
           {/* --- BRAND SECTOR --- */}
           <div className="lg:col-span-4 space-y-6">
             <h1 className="text-4xl font-black text-black tracking-tighter uppercase italic">
-              Funiro<span className="text-myColor">.</span>
+              Furniro<span className="text-myColor">.</span>
             </h1>
 
             {/* Real-Time Terminal Status */}
