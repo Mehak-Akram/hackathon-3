@@ -48,24 +48,7 @@ const Shop = () => {
         </div>
       </div>
       <ShopCard />
-      <div className="flex justify-center gap-5 mt-11">
-        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center text- hover:text-white">
-          {" "}
-          1
-        </div>
-        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center hover:text-white">
-          {" "}
-          2
-        </div>
-        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[60px] rounded-lg flex items-center justify-center hover:text-white">
-          {" "}
-          3
-        </div>
-        <div className="bg-cream text-black hover:bg-myColor h-[60px] w-[98px] rounded-lg flex items-center justify-center hover:text-white">
-          {" "}
-          Next
-        </div>
-      </div>
+
       <Support />
     </div>
   );

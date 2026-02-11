@@ -167,7 +167,7 @@ const Blog = () => {
               </div>
               <div className="flex justify-center">
                 <div className="w-[251px] h-[353px]">
-                  <h1 className="text-3xl font-semibold my-8">Categories</h1>
+                  <h1 className="text-3xl font-semibold my-8 text-black">Categories</h1>
                   <div className="flex justify-between my-9 text-gray">
                     <h1>Crafts</h1>
                     <h1>2</h1>

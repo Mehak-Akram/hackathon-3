@@ -14,10 +14,10 @@ function Furniture() {
   return (
     <div className="sm:flex sm:justify-center mt-16">
       <div className=" sm:w-[1540px] sm:h-[980px]">
-        <p className="font-semibold text-gray text-1xl text-center">
+        <p className="font-semibold text-black text-1xl text-center">
           Share your setup with
         </p>
-        <h1 className="text-center text-3xl font-extrabold">
+        <h1 className="text-center text-3xl font-extrabold text-myColor">
           #FuniroFurniture
         </h1>
         <div className=" mt-6 ">
